@@ -1,14 +1,16 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 /**
  * API Route para enviar emails de contacto usando Resend
  * POST /api/contact
  */
 export async function POST(request: Request) {
   try {
+    // Inicializar Resend solo cuando se necesite (lazy initialization)
+    // Esto evita errores durante el build time
+    const resend = new Resend(process.env.RESEND_API_KEY);
+    
     // Extraer datos del formulario
     const { name, email, message } = await request.json();
 
