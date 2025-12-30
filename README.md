@@ -2,6 +2,8 @@
 
 Landing page profesional con formulario de contacto funcional, construida con Next.js 14, TypeScript, React y Tailwind CSS.
 
+🚀 **Desplegado en Vercel**
+
 ## ✨ Características
 
 - 🎯 Diseño moderno y responsivo
